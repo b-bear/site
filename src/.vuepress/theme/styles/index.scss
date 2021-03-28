@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './arrow.scss';
+
+.header-anchor {
+  @apply hidden;
+}
