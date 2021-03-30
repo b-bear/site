@@ -48,7 +48,13 @@ export default {
       return this.$page.frontmatter.pageClass;
     },
   },
-
+  created() {
+    const { baseCanonicalUrl } = this.$site.themeConfig;
+    if (baseCanonicalUrl && typeof this.$ssrContext !== 'undefined') {
+      const pagePath = this.$page.path.replace(/\.html$/, '');
+      this.$ssrContext.userHeadTags += `<link rel="canonical" href="${baseCanonicalUrl}${pagePath}"/>`;
+    }
+  },
   mounted() {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false;

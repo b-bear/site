@@ -11,6 +11,7 @@ module.exports = {
           'rebecca deakin, beccy deakin, deakin, brighton, illustrator, illustration, animation, animator, games, games development, unity, unity3d, blender, 3d modelling, concept art',
       },
     ],
+    ['meta', { name: 'viewport', content: 'width=device-width' }],
     ['meta', { name: 'theme-color', content: '#16CAB1' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -18,6 +19,7 @@ module.exports = {
   ],
   siteTitle: 'Rebecca Deakin',
   themeConfig: {
+    baseCanonicalUrl: 'http://rebeccadeakin.com',
     logo: '/logo.png',
     nav: [
       {
