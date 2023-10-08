@@ -21,4 +21,4 @@ September 2008 - June 2009
 - Developing skills in 3D, Maya, Z-Brush
 
 If you want to get in contact, you can email me at [me@rebeccadeakin.com](mailto:me@rebeccadeakin.com).
-You can also follow me on twitter, [@BeccyDeakin](https://twitter.com/BeccyDeakin), or view my [linkedin profile](http://www.linkedin.com/in/rebecca-deakin-03a69927).
+You can also view my [linkedin profile](http://www.linkedin.com/in/rebecca-deakin-03a69927).

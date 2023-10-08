@@ -46,11 +46,11 @@ export default {
         text: 'me@rebeccadeakin.com',
         link: 'mailto:me@rebeccadeakin.com',
       },
-      {
+      /* {
         text: '@BeccyDeakin',
         link: 'https://twitter.com/BeccyDeakin',
         icon: 'twitter',
-      },
+      }, */
     ],
   },
   async transformPageData(pageData, { siteConfig }) {
