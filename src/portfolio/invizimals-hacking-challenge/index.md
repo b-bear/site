@@ -1,4 +1,5 @@
 ---
+title: Invizimals Hacking Challenge
 meta:
   - name: description
     content: The Invizimals Hacking Challenge is a suite of mini games developed in order to promote the PS Vita title "Invizimals - The Resistance".

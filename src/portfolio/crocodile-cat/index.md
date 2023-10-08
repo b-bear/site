@@ -1,4 +1,5 @@
 ---
+title: Crocodile Cat
 meta:
   - name: description
     content: Crocodile Cat is a one touch action/stratagy/timing mobile game where you have to escape the jaws of a crocodile and rescue kittens with the use of your trusty jetpack and some explosive pickups.

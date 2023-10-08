@@ -1,4 +1,5 @@
 ---
+title: Other Game Concept Art
 meta:
   - name: description
     content: Other Game Concept Art

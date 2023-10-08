@@ -1,4 +1,4 @@
-## Hi
+# Hi
 
 I am a 2D games artist, specializing in creating animation and graphics for mobile games, apps and HTML5 experiences.
 

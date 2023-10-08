@@ -1,4 +1,5 @@
 ---
+title: Get Well Soon Hospital
 meta:
   - name: description
     content: Based off of the titular Cbeebies tv series, Get Well Soon Hospital is a app made with the help of the Wellcome Trust, to help familiarise children with going into the hospital.

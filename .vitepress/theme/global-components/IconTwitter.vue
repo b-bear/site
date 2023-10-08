@@ -1,5 +1,5 @@
 <template>
-  <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <title>Twitter icon</title>
     <path
       fill="currentColor"

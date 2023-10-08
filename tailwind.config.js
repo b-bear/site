@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/.vuepress/theme/**/*.vue', './src/**/*.md'],
+  content: ['./.vitepress/theme/**/*.vue', './src/**/*.md'],
   theme: {
     extend: {
       colors: {

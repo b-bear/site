@@ -1,5 +1,11 @@
 <template>
-  <svg class="w-full h-full" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    class="w-full h-full"
+    aria-hidden="true"
+    focusable="false"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <title>LinkedIn icon</title>
     <path
       fill="currentColor"

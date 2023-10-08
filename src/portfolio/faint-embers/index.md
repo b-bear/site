@@ -1,4 +1,5 @@
 ---
+title: Faint Embers
 meta:
   - name: description
     content: A Game / Art project about mental health, set in Victorian-esque London with Ethan Bailey and Jak Boulton

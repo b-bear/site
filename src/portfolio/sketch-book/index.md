@@ -1,4 +1,5 @@
 ---
+title: Sketch Book
 meta:
   - name: description
     content: Sketch Book

@@ -1,5 +1,14 @@
-module.exports = {
-  dest: 'docs',
+import { createContentLoader } from 'vitepress';
+
+export default {
+  vite: {
+    build: {
+      // assetsInlineLimit: 0,
+    },
+    plugins: [],
+  },
+  srcDir: 'src',
+  outDir: 'docs',
   title: 'Rebecca Deakin - Game Artist',
   description: 'Rebecca Deakin - Game Artist',
   head: [
@@ -18,8 +27,11 @@ module.exports = {
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }],
   ],
   siteTitle: 'Rebecca Deakin',
+  lastUpdated: true,
+  sitemap: {
+    hostname: 'https://rebeccadeakin.com',
+  },
   themeConfig: {
-    baseCanonicalUrl: 'http://rebeccadeakin.com',
     logo: '/logo.png',
     nav: [
       {
@@ -30,10 +42,6 @@ module.exports = {
         text: 'About',
         link: '/about/',
       },
-      /* {
-        text: 'Portfolio',
-        link: '/portfolio/',
-      }, */
       {
         text: 'me@rebeccadeakin.com',
         link: 'mailto:me@rebeccadeakin.com',
@@ -45,18 +53,17 @@ module.exports = {
       },
     ],
   },
-
-  plugins: [
-    // tailwind
-    (options = {}, ctx) => {
-      const { cwd, siteConfig /*  sourceDir, vuepressDir */ } = ctx;
-      tailwindConfig = require(`${cwd}/tailwind.config.js`);
-      const plugins = [require('tailwindcss')(tailwindConfig), require('autoprefixer')];
-      siteConfig.postcss = Object.assign(siteConfig.postcss || {}, {
-        plugins,
-      });
-
-      return { name: 'tailwindcss-vuepress' };
-    },
-  ],
+  async transformPageData(pageData, { siteConfig }) {
+    let portfolioItems = await createContentLoader('./src/portfolio/**/index.md', {}).load();
+    portfolioItems = portfolioItems
+      .filter((page) => page.frontmatter.portfolioHub !== true)
+      .filter((page) => page.frontmatter.hidden !== true);
+    portfolioItems.sort((a, b) => {
+      if (a.frontmatter.featured) {
+        return a.frontmatter.featured ? -1 : 1;
+      }
+      return a.frontmatter.sort > b.frontmatter.sort ? -1 : 1;
+    });
+    pageData.portfolioItems = portfolioItems;
+  },
 };

@@ -1,4 +1,5 @@
 ---
+title: "Sesame Street: Elmo's Art Maker"
 meta:
   - name: description
     content: Sesame Street - Elmo's Art Maker is a drawing game available as both an iPad app, and a HTML5 game.

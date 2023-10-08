@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './arrow.scss';
+
+.header-anchor {
+  @apply hidden;
+}
+
+.dark .vp-code-light {
+  display: none;
+}
+
+html:not(.dark) .vp-code-dark {
+  display: none;
+}
+.vp-adaptive-theme .copy,
+  .vp-adaptive-theme .lang {
+  display: none;
+}

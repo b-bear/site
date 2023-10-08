@@ -1,5 +1,3 @@
 ---
-home: true
+portfolioHub: true
 ---
-
-<!-- enter homepage content -->

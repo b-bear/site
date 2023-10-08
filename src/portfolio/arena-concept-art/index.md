@@ -1,4 +1,5 @@
 ---
+title: Arena - Concept Art
 meta:
   - name: description
     content: Graphics and enemy designs for an isometric game, currently in development.

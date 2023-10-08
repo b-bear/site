@@ -21,12 +21,9 @@
           <p>How did we get here?</p>
         </div>
         <div class="mt-8 text-center">
-          <RouterLink
-            class="bg-beccy hover:bg-beccy-light text-white font-bold rounded text-lg p-4 inline-block"
-            to="/"
-          >
+          <a class="bg-beccy hover:bg-beccy-light text-white font-bold rounded text-lg p-4 inline-block" href="/">
             Take me home
-          </RouterLink>
+          </a>
         </div>
       </Wrapper>
     </main>
@@ -34,42 +31,27 @@
 </template>
 
 <script>
-import Home from '@theme/pages/Home.vue';
-import Portfolio from '@theme/pages/Portfolio.vue';
-import DefaultPage from '@theme/pages/DefaultPage.vue';
+import { watch } from 'vue';
+import { useRouter } from 'vitepress';
 import Navbar from '@theme/components/Navbar.vue';
 import Sidebar from '@theme/components/Sidebar.vue';
 import Wrapper from '@theme/components/Wrapper.vue';
 
-export default {
-  name: 'Layout',
+const emit = defineEmits(['toggle-sidebar']);
 
-  components: {
-    Wrapper,
-    Home,
-    Portfolio,
-    DefaultPage,
-    Sidebar,
-    Navbar,
-  },
+const router = useRouter();
+const isSidebarOpen = ref(false);
 
-  data() {
-    return {
-      isSidebarOpen: false,
-    };
-  },
-  mounted() {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false;
-    });
-  },
+watch(
+  () => router.route.data.relativePath,
+  (path) => {
+    isSidebarOpen.value = false;
+  }
+);
 
-  methods: {
-    toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen;
-      this.$emit('toggle-sidebar', this.isSidebarOpen);
-    },
-  },
+const toggleSidebar = (to) => {
+  isSidebarOpen.value = typeof to === 'boolean' ? to : !isSidebarOpen.value;
+  emit('toggle-sidebar', isSidebarOpen.value);
 };
 </script>
 
