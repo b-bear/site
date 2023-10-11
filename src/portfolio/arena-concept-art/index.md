@@ -6,6 +6,7 @@ meta:
   - name: keywords
     content: Arena, Concept Art
 thumb: /img/arena-thumb.png
+# encrypt: true
 ---
 
 # Arena - Concept Art
